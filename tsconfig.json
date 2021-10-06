@@ -19,16 +19,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./src/*"],
+      "react-dom": ["node_modules/preact/compat"]
     },
-    "jsx": "react"
+    "jsx": "react-jsx",
   },
   "exclude": [
     "node_modules"
-  ],
-  "include": [
-    "src", "assets.d.ts"
   ]
 }

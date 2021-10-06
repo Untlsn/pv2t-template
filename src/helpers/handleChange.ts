@@ -5,7 +5,7 @@ interface HandleChange {
   (callback: (x: number) => void, type: 'number'): ChangeEventHandler<HTMLInputElement>
 }
 
-const handleChange: HandleChange = (callback: Function, type?: string): ChangeEventHandler<HTMLInputElement> => {
+const handleChange: HandleChange = (callback: Function, type): ChangeEventHandler<HTMLInputElement> => {
   if (type == 'number') {
     return ({ target }) => callback(Number(target.value));
   }
